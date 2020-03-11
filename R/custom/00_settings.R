@@ -1,15 +1,15 @@
 # ---- Metadata ----
 META <- list(
   # Name of the app, used in the browser/tab title
-  name        = "useR!2019",
+  name        = "COVID19",
   # The name of the conference or organization
-  conf_org    = "UseR2019",
+  conf_org    = "COVID19",
   # App title, long, shown when sidebar is open, HTML is valid
-  logo_lg     = "use<strong>R</strong>!2019",
+  logo_lg     = "COVID19",
   # App title, short, shown when sidebar is collapsed, HTML is valid
-  logo_mini   = "use<strong>R</strong>",
+  logo_mini   = "COVID19",
   # Icon for box with count of conference-related tweets
-  topic_icon  = "r-project",
+  topic_icon  = "COVID19",
   # Icon for box with count of "community"-related tweets
   topic_icon_full = "comments",
   # AdminLTE skin color for the dashboard
@@ -24,7 +24,7 @@ META <- list(
 META$app_twitter_card_style <- "summary_large_image"
 
 # A description of the app, used in social media cards
-META$description <- "A Shiny Dashboard, useR!2019 #FOMO reducer, tweet explorer by @grrrck"
+META$description <- "A Shiny Dashboard, tweet explorer by @grrrck"
 
 # Link to the app, used in social media cards
 META$app_url <- "https://apps.garrickadenbuie.com/user-2019/"
@@ -50,24 +50,23 @@ META$twitter_site <- "https://garrickadenbuie.com"
 # gathering.
 TOPIC <- list(
   # Name of the conference or topic, for use in descriptive text
-  name = "useR!2019",
+  name = "COVID19",
   # Name of the full Twitter community, for use in descriptive text
-  full_community   = "#rstats",
+  full_community   = "Coronavirus",
   # Terms related to the topic that must be included in topical tweet text
   # Note that these are used internally and are compared with the lowercase
   # tweet text (so that case doesn't matter). Terms are evaluated invidividually
   # using str_detect(tweet_text, term), so you may use regular expressions. A
   # tweet is considered "topical" if _any_ term matches.
-  terms = c("user2019", "user19", "user2019conf", "user 2019", "user conf"),
+  terms = c("COVID19", "CVOID-19", "coronavirus"),
   # Search string as would be entered at https://twitter.com/search
   search_terms = paste0(
-    "#user2019 OR #useR2019 OR #UseR2019 OR #useR2019_conf OR #UseR2019Conf OR ",
-    "#UseR2019_Conf OR #user2019conf OR #user2019conf OR @UseR2019_conf"
+    "#COVID19 OR #COVID-19 OR #coronavirus OR #COVID"
   ),
   # Hashtags to exclude from the Top 10 Hashtags list (because they're implied by the topic)
-  hashtag_exclude  = "user|user2019conf|user2019|rstats",
+  hashtag_exclude  = "covid19|covid-19|coronavirus|covid",
   # Words to exclude from the Top 10 Words list (because they're implied by the topic)
-  wordlist_exclude = "user|conf|rstats"
+  wordlist_exclude = "Wuhan|Hubei"
 )
 
 # ---- Tweet Storage Location ----
@@ -123,8 +122,8 @@ TWEET_MOST <- list(
 )
 
 # ---- Dates and Times ----
-TWEETS_START_DATE <- "2019-07-01"  # Don't show tweets before this date
-TZ_GLOBAL <- "Europe/Paris"        # Time zone where conference is taking place
+TWEETS_START_DATE <- "2020-03-09"  # Don't show tweets before this date
+TZ_GLOBAL <- "America/Chicago"        # Time zone where conference is taking place
 Sys.setenv(TZ = TZ_GLOBAL)
 
 # A helper to get today() in the app's timezone
@@ -144,8 +143,8 @@ TWEET_WALL_DATE_INPUTS <- c(
 )
 
 # Conference-related dates, used only for the rest of this section
-.tutorial_start   <- ymd("2019-07-09", tz = tz_global())
-.conference_start <- ymd("2019-07-08", tz = tz_global())
+.tutorial_start   <- ymd("2020-03-01", tz = tz_global())
+.conference_start <- ymd("2020-03-01", tz = tz_global())
 
 # Only show "Since Workshop" button _after_ workshops have started
 if (today_tz() > .tutorial_start) {
