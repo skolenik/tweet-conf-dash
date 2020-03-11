@@ -1,0 +1,3 @@
+.tweets.rds.lock
+.tweets_simplified.rds.lock
+gathertweet.log

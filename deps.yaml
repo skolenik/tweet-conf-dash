@@ -16,6 +16,11 @@
   GithubRepo: gathertweet
   GithubRef: master
   GithubSHA1: 97058c381ce729926adbf0822bd688c2e78d38ca
+- Package: shinyThings
+  GithubUsername: gadenbuie
+  GithubRepo: shinyThings
+  GithubRef: master
+  GithubSHA1: 585a40f4015cac4e89851898e20ab4c7547c620c
 - Package: forcats
   Repository: CRAN
   Version: 0.4.0
