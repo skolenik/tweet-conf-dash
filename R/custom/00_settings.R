@@ -181,8 +181,8 @@ TWEET_WALL_DATE_RANGE <- function(inputId) {
 # sidebar button link directly to the conference schedule. Or also provide
 # `SCHEDULE$data` to display an interactive dataTable of the schedule.
 SCHEDULE <- list()
-SCHEDULE$url <- "https://user2019.r-project.org/talk_schedule/"
-SCHEDULE$data <- readRDS(here::here("data/schedule.rds"))
+# SCHEDULE$url <- "https://user2019.r-project.org/talk_schedule/"
+# SCHEDULE$data <- readRDS(here::here("data/schedule.rds"))
 
 # ---- Google Analytics Key ----
 # If you would like to use Google Analytics, save your GA key in a file called
