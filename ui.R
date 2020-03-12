@@ -7,8 +7,8 @@ dashboardPage(
   # Dashboard Page Setup ----------------------------------------------------
   title = META$name,
   skin  = META$skin_color,
-#  theme = c(META$theme_css, "custom.css"),
-#  sidebar_mini = TRUE,
+  theme = c(META$theme_css, "custom.css"),
+  sidebar_mini = TRUE,
   dashboardHeader(
     title = HTML(glue::glue(
       '<span class="logo-mini">{META$logo_mini}</span>
@@ -88,37 +88,37 @@ dashboardPage(
         fluidRow(
           # Frontpage - boxes - start -----------------------------------------------
           valueBox(
-            # inputId = "total_today",
+            inputId = "total_today",
             "—", "Tweets Today",
             color = "purple",
             icon = icon("comment-dots"),
             width = dashboard_box_size),
           valueBox(
-            # inputId = "tweeters_today",
+            inputId = "tweeters_today",
             "—", "Tweeters Today",
             color = "orange",
             icon = icon("user-circle"),
             width = dashboard_box_size),
           valueBox(
-            # inputId = "rate",
+            inputId = "rate",
             "—", "Tweets/hr Today",
             color = "green",
             icon = icon("hourglass-half"),
             width = dashboard_box_size),
           if (!is.null(TOPIC$full_community)) valueBox(
-            # inputId = "total_favorites",
+            inputId = "total_favorites",
             "—", paste(TOPIC$name, "Likes"),
             color = "red",
             icon = icon("heart"),
             width = dashboard_box_size),
           valueBox(
-            # inputId = "total_topic",
+            inputId = "total_topic",
             "—", paste(TOPIC$name, "Tweets"),
             color = "teal",
             icon = icon(META$topic_icon),
             width = dashboard_box_size),
           if (!is.null(TOPIC$full_community)) valueBox(
-            # inputId = "total_all",
+            inputId = "total_all",
             "—", paste(TOPIC$full_community, "Tweets"),
             color = "fuchsia",
             icon = icon(META$topic_icon_full),
